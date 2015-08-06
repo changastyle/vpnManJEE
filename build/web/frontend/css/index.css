@@ -1,0 +1,184 @@
+#banner
+{
+    position: fixed;
+    left:0px;
+    top:0px;
+    background-color:burlywood;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    margin:0px;
+    text-align: center;
+    z-index: 2;
+}
+#wraperBanner
+{
+    //border:solid 2px black;
+    width: 40%;
+    position:absolute;
+    left:30%;
+    right: 30%;
+    overflow: hidden;
+    cursor:pointer;
+    height: 70px;
+    border-radius: 5px;
+}
+#headerBanner
+{//background-color: white;
+    font-size: 36px;
+    position: absolute;
+    top:15px;
+    left:15%;
+   
+}
+#imagenBanner
+{
+    display: inline-block;
+    position:absolute;
+    right: 5px;
+}
+#barraNavegacion
+{
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    position:absolute;
+    top:80px;
+    left:0px;
+    box-sizing: border-box;
+    
+}
+.navsItems
+{
+    display: inline-block;
+    color:white;
+    cursor:pointer;
+    height: 80%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f85bb+0,4f85bb+100;Blue+3D+%239 */
+background: #4f85bb; /* Old browsers */
+background: -moz-linear-gradient(top,  #4f85bb 0%, #4f85bb 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f85bb), color-stop(100%,#4f85bb)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #4f85bb 0%,#4f85bb 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #4f85bb 0%,#4f85bb 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #4f85bb 0%,#4f85bb 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #4f85bb 0%,#4f85bb 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f85bb', endColorstr='#4f85bb',GradientType=0 ); /* IE6-9 */
+
+    border-radius:5px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 4px;
+}
+.navsItems:hover
+{
+    box-shadow: inset -1px -1px 15px darkblue;
+}
+#imagenBanner
+{
+    height: 100%;
+}
+#contenedorPrincipal
+{
+    background-color:burlywood;
+    width: 80%;
+    height: 2000px;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top:130px;
+    border:solid 5px black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#barraBusqueda
+{
+    width: 90%;
+    padding:12px;
+    font-size: 24px;
+    display:inline;
+    box-sizing: border-box;
+    margin:0px;
+}
+#botonBusqueda
+{
+    box-sizing: border-box;
+    margin:0px;
+    width: 9%;
+    padding:12px;
+    font-size: 24px;
+    display:inline;
+}
+#wraperGrilla
+{
+    width: 100%;
+    height: 100%;
+    background-color:yellow;
+    overflow:hidden;
+    padding:10px;
+}
+.desplegadoresLaterales
+{
+    position: absolute;
+    background-color:burlywood;
+    width: 80px;
+    height: 100%;
+    border:solid 5px black;
+    box-sizing: border-box;
+}
+#desplegadorLateralDER
+{
+    left: 0px;
+}
+#desplegadorLateralIZQ
+{
+    right:0px;
+}
+
+.contenedoresLaterales
+{
+    background-color: yellow;
+    height: calc(100% - 240px);
+    width: 80px;
+    position: absolute;
+    top:130px;
+    transition: 1s;
+    z-index: 1;
+    overflow: hidden;
+    
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eab92d+0,c79810+100;Yellow+3D+%232 */
+background: #eab92d; /* Old browsers */
+background: -moz-linear-gradient(top,  #eab92d 0%, #c79810 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eab92d), color-stop(100%,#c79810)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eab92d 0%,#c79810 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eab92d 0%,#c79810 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eab92d 0%,#c79810 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eab92d 0%,#c79810 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=0 ); /* IE6-9 */
+
+}
+#contenedorLateralDER
+{
+    right: 0px;
+}
+#contenedorLateralIZQ
+{
+    left:0px;
+}
+footer
+{
+    position:relative;
+    bottom: 20px;
+    left: 0px;
+    background-color:burlywood;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    margin:0px;
+    text-align: center;
+    padding:20px;
+    z-index: 5;
+}
+#imgLoading
+{
+    display: none;
+}
