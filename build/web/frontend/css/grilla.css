@@ -1,0 +1,57 @@
+.tableHeaders
+{
+    
+    text-align: center;
+    font-family: Prototype;
+    font-size: 24px;
+    border-radius: 5px;
+    padding:8px;
+    //border:solid 2px black;
+    
+    background: #ffd565; /* Old browsers */
+
+}
+.filas
+{
+    font-family: Prototype;
+    text-align: center;
+    font-size:18px;
+    padding:8px;
+    border-radius:5px;
+}
+.filaPar
+{
+    background-color:#F5F5F5;
+}
+.filaImpar
+{
+    background-color: #FFEAB2;
+}
+.enlacesHeaderGrilla
+{
+    color:black;
+    text-decoration: none;
+}
+.enlacesHeaderGrilla:hover
+{
+    text-decoration: underline;
+}
+.selectButtons
+{
+    background-color:#366097;
+    color:white;
+    padding:8px;
+    border-radius:5px;
+    box-sizing: border-box;
+}
+.selectButtons:hover
+{
+    box-shadow: inset -1px -1px 15px white;
+}
+#imagenCargandoGrilla
+{
+    position:absolute;
+    width: 20%;
+    left:40%;
+    right: 40%;
+}
