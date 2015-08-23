@@ -14,7 +14,7 @@ public class RadCheckDAO
         
         listaProvisoria = AbstractDAO.findAll(model.Radcheck.class);
         
-        System.out.println("listaProvisoria.size = " + listaProvisoria.size());
+        //System.out.println("listaProvisoria.size = " + listaProvisoria.size());
         for(Object o : listaProvisoria)
         {
             Radcheck radcheck = (Radcheck) o;
@@ -31,7 +31,7 @@ public class RadCheckDAO
         
         listaProvisoria = AbstractDAO.findAll(hql);
         
-        System.out.println("listaProvisoria.size = " + listaProvisoria.size());
+        //System.out.println("listaProvisoria.size = " + listaProvisoria.size());
         for(Object o : listaProvisoria)
         {
             Radcheck radcheck = (Radcheck) o;

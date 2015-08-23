@@ -19,9 +19,9 @@
         <h1>Hello World!</h1>
         <form action="backend/altaModem.jsp" method="post">
             <table>
-                <tr><td><input type="text" class="inputsFormularioModem" id="inputNombreformularioAltaModem" name="usuarioADSL" data-text=<%out.print(Controller.Controller.dameUsuarioADSLSugerido());%>  onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
-                <tr><td><input type="text" class="inputsFormularioModem" id="inputIPformularioAltaModem" name="direccionIP" data-text=<%out.print(Controller.Controller.dameIPSugerida());%> onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
-                <tr><td><input type="text" class="inputsFormularioModem" id="inputObservacionesformularioAltaModem" name="observaciones" data-text="Observaciones" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
+                <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaModem" name="usuarioADSL" data-text=<%out.print(Controller.Controller.dameUsuarioADSLSugerido());%>  onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
+                <tr><td><input type="text" class="inputsFormularios" id="inputIPformularioAltaModem" name="direccionIP" data-text=<%out.print(Controller.Controller.dameIPSugerida());%> onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
+                <tr><td><input type="text" class="inputsFormularios" id="inputObservacionesformularioAltaModem" name="observaciones" data-text="Observaciones" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
                 
                 <tr><td colspan="2"><input type="submit" value="Agregar Modem"></td></tr>
             </table>

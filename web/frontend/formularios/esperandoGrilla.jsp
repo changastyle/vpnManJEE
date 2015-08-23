@@ -1,1 +1,0 @@
-<img id="imagenCargandoGrilla"src="frontend/assets/img/loading.gif">
