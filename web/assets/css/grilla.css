@@ -36,19 +36,7 @@
 {
     text-decoration: underline;
 }
-.selectButtons
-{
-    background-color:#366097;
-    color:white;
-    padding:8px;
-    border-radius:5px;
-    box-sizing: border-box;
-    cursor:pointer;
-}
-.selectButtons:hover
-{
-    box-shadow: inset -1px -1px 15px white;
-}
+
 #imagenCargandoGrilla
 {
     position:absolute;

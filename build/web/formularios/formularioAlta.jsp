@@ -10,7 +10,7 @@
                 <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaModem" name="usuarioADSL" data-text=<%out.print(Controller.Controller.dameUsuarioADSLSugerido());%>  onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
                 <tr><td><input type="text" class="inputsFormularios" id="inputIPformularioAltaModem" name="direccionIP" data-text=<%out.print(Controller.Controller.dameIPSugerida());%> onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
                 <tr><td><input type="text" class="inputsFormularios" id="inputObservacionesformularioAltaModem" name="observaciones" data-text="Observaciones" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
-                <tr><td colspan="2"><input type="submit" class="inputsFormularios" id="botonAltaADSL" value="Agregar Modem"></td></tr>
+                <tr><td colspan="2"><input type="submit" class="botones inputsFormularios" id="botonAltaADSL" value="Agregar Modem"></td></tr>
             </table>
         </form>
   </div>
@@ -19,7 +19,7 @@
             <table class='tablasFormularios' id='tablaFormAltaADSL'>
                 <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaUsuario" name="nombreUsuario" data-text="nombreusuario" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
                 <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaUsuario" name="password" data-text="password" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
-                <tr><td colspan="2"><input type="submit" class="inputsFormularios" id="botonAltaUsuario" value="Agregar Usuario"></td></tr>
+                <tr><td colspan="2"><input type="submit" class="botones inputsFormularios" id="botonAltaUsuario" value="Agregar Usuario"></td></tr>
             </table>
         </form>
       

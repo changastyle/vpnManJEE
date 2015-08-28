@@ -11,7 +11,7 @@
         
         <input type="text" id="barraBusqueda" onfocus="buscar()" onblur="buscar()" onkeypress="buscar()" onkeyup="buscar()">
         
-        <button id="botonBusqueda">Buscar</button>
+        <button class="botones" id="botonBusqueda">Buscar</button>
      
         <div id="wraperGrilla"></div>
     </body>
