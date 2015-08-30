@@ -3,7 +3,7 @@ function init()
 {
     console.log("ready");
     cargarBanner();
-    cargarContenedorPrincipal();
+    cargarContenedorPrincipal("formularios/adsls.jsp");
     cargarLateralDerecho();
 }
 function cargarBanner()
@@ -24,32 +24,40 @@ function cargarBarraNavegacion()
         $("#barraNavegacion").html(resultado);
     });
 }
-function cargarContenedorPrincipal(orden)
+function cargarContenedorPrincipal(direccion)
 {
-    $.ajax({url:"formularios/vpn.jsp", method: "POST", 
+    $.ajax({url:direccion, method: "POST", 
     success:function(resultado)
     {
         $("#contenedorPrincipal").html(resultado);
         
-        buscar(orden);
+        if(direccion == "formularios/adsls.jsp")
+        {
+            buscarModem();
+        }
+        else if(direccion == "formularios/usuarios.jsp")
+        {
+            buscarUsuario();
+        }
     }});
 }
-function buscar(orden)
+function buscarModem(orden)
 {
-    
-    metadata = $("#barraBusqueda").val();
+    console.log("|--- Buscando Modems: ---|");
+    metadata = $("#barraBusquedaModems").val();
     if(orden == null)
     {
         orden = "ID";
     }
-    console.log("Metadata: " + metadata );
-    console.log("Orden: " + orden );
+    console.log("|      Metadata: " + metadata );
+    console.log("|      Orden: " + orden );
     
-    $.ajax({url:"formularios/grilla.jsp", method: "POST", data:{'metadata':metadata,'orden':orden},
+    $.ajax({url:"formularios/grillaModems.jsp", method: "POST", data:{'metadata':metadata,'orden':orden},
     beforeSend: function ()
     {
         cargando();
-/*        $.post("formularios/esperandoGrilla.jsp").done(function(data)
+        /*
+        $.post("formularios/esperandoGrilla.jsp").done(function(data)
         {
             $("#wraperGrilla").html(data);  
         });*/
@@ -57,7 +65,37 @@ function buscar(orden)
     {
         $("#wraperGrilla").html(result);                             
     }});
+    console.log("|--- FIN Busqueda Modems ---|");
     
+}function buscarUsuario(orden)
+{
+    console.log("|--- Buscando Usuarios: ---|");
+    metadata = $("#barraBusquedaUsuarios").val();
+    if(metadata == null)
+    {
+        metadata = "";
+    }
+    if(orden == null)
+    {
+        orden = "ID";
+    }
+    console.log("|      Metadata: " + metadata );
+    console.log("|      Orden: " + orden );
+    
+    $.ajax({url:"formularios/grillaUsuarios.jsp", method: "POST", data:{'metadata':metadata,'orden':orden},
+    beforeSend: function ()
+    {
+        cargando();
+        /*
+        $.post("formularios/esperandoGrilla.jsp").done(function(data)
+        {
+            $("#wraperGrilla").html(data);  
+        });*/
+    },success:function(result)
+    {
+        $("#wraperGrilla").html(result);                             
+    }});
+    console.log("|--- FIN Busqueda Usuarios ---|");
 }
 function cargando()
 {
@@ -65,6 +103,34 @@ function cargando()
     {
         $("#wraperGrilla").html(data);  
     });
+}
+function ordenarPorModem(parametro)
+{
+    console.log("Parametro:" + parametro);
+    
+    if(parametro == 'nombre')
+    {
+        parametro = 'username';
+    }
+    if(parametro == 'password')
+    {
+        parametro = 'value';
+    }
+    buscarModem(parametro);
+}
+function ordenarPorUsuario(parametro)
+{
+    console.log("Parametro:" + parametro);
+    
+    if(parametro == 'nombre')
+    {
+        parametro = 'username';
+    }
+    if(parametro == 'password')
+    {
+        parametro = 'value';
+    }
+    buscarUsuario(parametro);
 }
 function cargarLateralDerecho()
 {
@@ -123,7 +189,7 @@ function goToHome()
 {
     window.location.replace("index.jsp");
 }
-function navegar(paDonde)
+/*function navegar(paDonde)
 {
     contenedor = $("#contenedorPrincipal");
     
@@ -153,7 +219,7 @@ function navegar(paDonde)
         }); 
     }
     
-}
+}*/
 function openModem(quien)
 {
     usuarioADSL = $(quien).html() ;

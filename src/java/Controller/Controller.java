@@ -7,10 +7,13 @@ import java.util.Comparator;
 import java.util.List;
 import model.Modem;
 import model.Radcheck;
+import model.Usuario;
 import model.daos.RadCheckDAO;
 
 public class Controller
 {
+    
+    //<editor-fold desc="METODOS DE MODEMS:">
     public static ArrayList<Radcheck> findAllRadCheck()
     {
         ArrayList<Radcheck> arrRespuesta;
@@ -66,7 +69,6 @@ public class Controller
         
         return arrOrdenado;
     }
-    
     public static ArrayList<Modem> filtrarModems(String metadatos)
     {
         ArrayList<Modem> arrProvisorio = new ArrayList<Modem>();
@@ -230,40 +232,16 @@ public class Controller
         
         return respuesta;
     }
-    /*
-    public static void createRadcheck(Radcheck radcheck)
+    //</editor-fold>
+    
+    //<editor-fold desc="METODOS DE USUARIOS:">
+    public static ArrayList<model.Usuario> findAllUsuarios()
     {
-        RadCheckDAO radcheckDAO = new RadCheckDAO();
-        radcheckDAO.save(radcheck);
-        
-        
+        return model.daos.UsuarioDAO.findAll();
     }
-    public static ArrayList<Radcheck> getArrRadCheck(String sql)
+    public static boolean saveUsuario(Usuario usuario)
     {
-        ArrayList<Radcheck> arr = new ArrayList<Radcheck>();
-        
-        ArrayList<Object> arrObjetos = RadCheckDAO.findAll(sql);
-        
-        for(Object o : arrObjetos)
-        {
-            Radcheck radcheck = (Radcheck) o;
-            arr.add(radcheck);
-        }
-        
-        return arr;
+        return model.daos.UsuarioDAO.save(usuario);
     }
-    public static ArrayList<Radcheck> getArrRadCheck()
-    {
-        ArrayList<Radcheck> arr = new ArrayList<Radcheck>();
-        
-        ArrayList<Object> arrObjetos = RadCheckDAO.findAll(model.Radcheck.class);
-        
-        for(Object o : arrObjetos)
-        {
-            Radcheck radcheck = (Radcheck) o;
-            arr.add(radcheck);
-        }
-        
-        return arr;
-    }*/
+    //</editor-fold>
 }

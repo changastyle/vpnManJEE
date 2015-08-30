@@ -55,18 +55,18 @@ public class RadCheckDAO
                 lastRadcheck = r;
                 mayorID = r.getId();
             }
-            if(r.getUsername().equalsIgnoreCase(radcheck.getUsername()))
+            /*if(r.getUsername().equalsIgnoreCase(radcheck.getUsername()))
             {
                 System.out.println("RADCHECK DUPLICADO EN EL USERNAME");
                 existe = true;
-            }
+            }*/
         }
-        if(!existe)
-        {
+        /*if(!existe)
+        {*/
             System.out.println("LAST RADCHECK:" + lastRadcheck.toString());
-            radcheck.setId((mayorID + 1));
+            radcheck.setId((mayorID +  1));
             id = model.daos.AbstractDAO.save(radcheck); 
-        }
+       /* }*/
 
         return id;
     }

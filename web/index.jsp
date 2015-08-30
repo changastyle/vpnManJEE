@@ -13,8 +13,6 @@
         <script src="assets/scripts/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="assets/scripts/index.js"></script>
-        <script src="assets/scripts/vpn.js"></script>
-        <script src="assets/scripts/grilla.js"></script>
         <script src="assets/scripts/formularios.js"></script>
     </head>
     <body onresize="resize()">

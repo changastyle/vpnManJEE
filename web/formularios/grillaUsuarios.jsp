@@ -1,3 +1,4 @@
+<%@page import="model.Usuario"%>
 <%@page import="java.util.Comparator"%>
 <%@page import="java.util.Collections"%>
 <%@page import="model.Modem"%>
@@ -9,20 +10,20 @@
         
     String metadata =  request.getParameter("metadata").toLowerCase();
     String orden =  request.getParameter("orden");
-    ArrayList<Modem> arrModems;
+    ArrayList<Usuario> arrUsuariosVPN;
          
-    if(metadata != null && !metadata.trim().equalsIgnoreCase(""))
+    /*if(metadata != null && !metadata.trim().equalsIgnoreCase(""))
     {
         arrModems = Controller.Controller.buscar(metadata);
         //out.print("Buscando: " + metadata + " | ");
     }
     else
-    {
-        arrModems = Controller.Controller.findAllModems();
+    {*/
+        arrUsuariosVPN = Controller.Controller.findAllUsuarios();
         //out.print("METADATA = NULL");
-    }
+    //}
     String msgResultadosObtenidos = "";
-    if(arrModems.size() == 1)
+    if(arrUsuariosVPN.size() == 1)
     {
         msgResultadosObtenidos = "resultado obtenido";
     }
@@ -31,24 +32,28 @@
         msgResultadosObtenidos = "resultados obtenidos";
     }
     
-    out.print("<div id='divCantidadResultadosGrilla'>" + arrModems.size() + " " + msgResultadosObtenidos + " </div>");
+    out.print("<div id='divCantidadResultadosGrilla'>" + arrUsuariosVPN.size() + " " + msgResultadosObtenidos + " </div>");
     %>
 
 <table id="grilla" >
     <tr>
-        <td class="tableHeaders grillaColumnaID"><a class="enlacesHeaderGrilla" href="javascript:ordenar('ID')">ID</a></td>
-        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenar('Direccion IP')">Direccion IP</a></td>
-        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenar('NetMask')">NetMask</a></td>
-        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenar('Observaciones')">Observaciones</a></td>
+        <td class="tableHeaders grillaColumnaID"><a class="enlacesHeaderGrilla" href="javascript:ordenarPorModem('ID')">Nombre Usuario</a></td>
+        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenarPorModem('Direccion IP')">Password</td>
+        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenarPorModem('NetMask')">Reintentos</a></td>
+        <td class="tableHeaders"><a class="enlacesHeaderGrilla" href="javascript:ordenarPorModem('Observaciones')">Observaciones</a></td>
     </tr>
     
 
   <%  
-    if(arrModems != null)
+    for(Usuario u : arrUsuariosVPN)
+    {
+        out.print("<tr><td>" + u.getNombreUsuario() + "</td><td>" + u.getPassword() + "</td><td>" +u.getReintentos()+ "</td><td>" + u.getRadcheck().getObservaciones() +"</td></tr>");
+    }
+    /*if(arrUsuariosVPN != null)
     {
         if(orden.equalsIgnoreCase("ID") || orden.equalsIgnoreCase("NetMask"))
         {
-            Collections.sort(arrModems, new Comparator<Modem>() 
+            Collections.sort(arrUsuariosVPN, new Comparator<Modem>() 
             {
                 @Override
                 public int compare(Modem  m1, Modem  m2)
@@ -88,10 +93,10 @@
         
 
     
-        
+
         int contador = 0;
         String paridad = "";
-        for(Modem modem : arrModems)
+        for(Usuario usuario : arrUsuariosVPN)
         {
             if( contador % 2 == 0  )
             {
@@ -102,17 +107,16 @@
                 paridad = "filaImpar";
             }
             out.print("<tr>");
-            out.print("<td class='filas selectButtons " + paridad + "' onclick='openModem(this)' >" + modem.getNombreADSL()+ "</td>");
-            out.print("<td class='filas " + paridad + "'>" + modem.getDireccionIP()+ "</td>");
-            out.print("<td class='filas " + paridad + "'>" + modem.getMascaraDeSubRed() + "</td>");
+            out.print("<td class='filas selectButtons " + paridad + "' onclick='openModem(this)' >" + usuario.getNombreUsuario() +"</td>");
+            out.print("<td class='filas " + paridad + "'>" + usuario.getReintentos()+ "</td>");
+           out.print("<td class='filas " + paridad + "'>" + modem.getMascaraDeSubRed() + "</td>");
             out.print("<td class='filas " + paridad + "'>" + modem.getObservaciones() + "</td>");
             out.print("</tr>");
         }
-    }
-    else
+    }else
     {
-        out.print("No hay resultados");
-    }
+        //out.print("No hay resultados");
+    }*/
     %>
 
 </table>

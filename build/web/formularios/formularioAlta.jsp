@@ -18,7 +18,7 @@
         <form class='formsAltas' id='formAltaADSL'action="scriplets/altaUsuario.jsp" method="post">
             <table class='tablasFormularios' id='tablaFormAltaADSL'>
                 <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaUsuario" name="nombreUsuario" data-text="nombreusuario" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
-                <tr><td><input type="text" class="inputsFormularios" id="inputNombreformularioAltaUsuario" name="password" data-text="password" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
+                <tr><td><input type="password" class="inputsFormularios" id="inputNombreformularioAltaUsuario" name="password" data-text="password" onfocus="limpiar(this)" onblur="blu(this)"></td></tr>
                 <tr><td colspan="2"><input type="submit" class="botones inputsFormularios" id="botonAltaUsuario" value="Agregar Usuario"></td></tr>
             </table>
         </form>

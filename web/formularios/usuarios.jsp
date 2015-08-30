@@ -9,7 +9,7 @@
     <body>
         <!--<h1>VPN</h1>-->
         
-        <input type="text" id="barraBusqueda" onfocus="buscar()" onblur="buscar()" onkeypress="buscar()" onkeyup="buscar()">
+        <input type="text" class="barrasDeBusqueda" id="barraBusquedaUsuarios" onfocus="buscarUsuario()" onblur="buscarUsuario()" onkeypress="buscarUsuario()" onkeyup="buscarUsuario()">
         
         <button class="botones" id="botonBusqueda">Buscar</button>
      

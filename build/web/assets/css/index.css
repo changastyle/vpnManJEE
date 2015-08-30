@@ -25,7 +25,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', end
 }
 #wraperBanner
 {
-    //border:solid 2px black;
+    border:solid 2px black;
     width: 40%;
     position:absolute;
     left:30%;
@@ -34,20 +34,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', end
     cursor:pointer;
     height: 70px;
     border-radius: 5px;
+    min-width: 400px;
 }
 #headerBanner
-{//background-color: white;
+{   
+    text-align: center;
+    width: 100%;
+    //background-color: white;
     font-size: 36px;
     position: absolute;
     top:15px;
-    left:15%;
+    left:0px;
    
 }
 #imagenBanner
 {
+    height: 100%;
+    width: auto;
     display: inline-block;
-    position:absolute;
-    right: 5px;
+    float:right;
+    /*position:absolute;
+    right: 5px;*/
 }
 #barraNavegacion
 {
@@ -63,18 +70,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', end
 }
 .navsItems
 {
+    background-color:#366097;
+    padding:8px;
+    border-radius:5px;
+    box-sizing: border-box;
     display: inline-block;
+    
     color:white;
     cursor:pointer;
     font-family: Prototype;
     margin:2px;
-    /*height: 80%;
-
-
-   /* border-radius:5px;
-    box-sizing: border-box;
-    padding: 8px;
-    margin: 4px;*/
 }
 .navsItems:hover
 {
@@ -417,4 +422,28 @@ font-family:Prototype;
 //border:solid 2px black;
 border-radius: 5px;
 
+}
+
+#grilla
+{
+    width: 100%;
+    height: auto;
+}
+.barrasDeBusqueda
+{
+    width: calc(100% - 205px);
+    padding:12px;
+    font-size: 24px;
+    display:inline;
+    box-sizing: border-box;
+    margin:0px;
+}
+#botonBusqueda
+{
+    box-sizing: border-box;
+    margin:0px;
+    width: 200px;
+    padding:12px;
+    font-size: 24px;
+    display:inline;
 }
